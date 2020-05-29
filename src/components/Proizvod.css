@@ -1,11 +1,17 @@
 
 img {
     width: 8em;
-    height: 16em;
+    height: 13em;
 }
 
 .cijena .naziv {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
 
 .omotac {
