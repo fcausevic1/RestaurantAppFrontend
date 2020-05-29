@@ -1,0 +1,5 @@
+.list li {
+    display:inline;
+    float: left;
+    padding: 10px;
+}
