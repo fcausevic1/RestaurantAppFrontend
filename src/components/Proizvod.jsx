@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
- //import logo from 'cevap.jpg'
+import './Proizvod.css';
+
+ import image from './cevap.jpg'
 const Proizvod = (props) => {
    const [nesto] = useState("Konj")
     return (
         
-         <div>
+         <div class="omotac">
              <div clas="slika">
-             <img src={require('./cevap.jpg')} />
+             <img src={image}></img>
              </div>
              <div class="naziv">
-         <h>{props.naziv_proizvoda}</h>
+         <h1>{props.naziv_proizvoda}</h1>
             </div>
             <div class="cijena">
-         <h>{props.cijena_proizvoda}</h>
+         <h1>{props.cijena_proizvoda}</h1>
             </div>
         </div>
     )
