@@ -3,17 +3,17 @@ import './Proizvod.css';
 
  import image from './cevap.jpg'
 const Proizvod = (props) => {
-   const [nesto] = useState("Konj")
+ //  const [nesto] = useState("Konj")
     return (
         
-         <div class="omotac">
-             <div clas="slika">
+         <div className="omotac" id="rcorners">
+             <div className="slika">
              <img src={image}></img>
              </div>
-             <div class="naziv">
+             <div className="naziv">
          <h1>{props.naziv_proizvoda}</h1>
             </div>
-            <div class="cijena">
+            <div className="cijena">
          <h1>{props.cijena_proizvoda}</h1>
             </div>
         </div>

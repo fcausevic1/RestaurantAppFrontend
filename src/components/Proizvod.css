@@ -1,4 +1,19 @@
-.omotac {
-    width: 100px;
-    height: 200px;
+
+img {
+    width: 8em;
+    height: 16em;
 }
+
+.cijena .naziv {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.omotac {
+    margin-left: 10px;
+    border-radius: 25px;
+    border: 2px solid rgb(173, 33, 33);
+    padding: 20px;
+    width: 8em;
+    
+    
+  }
