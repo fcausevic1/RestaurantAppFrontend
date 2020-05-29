@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Jelo from './components/Jelo';
+import Proizvod from './Proizvod.jsx';
 
 class App extends Component {
   render() {
     return (
-    <Jelo ime_jela ="PIzza"/>
+    <Proizvod naziv_proizvoda ="nesto" cijena_proizvoda="1KM"/>
+    
     );
   }
 }
