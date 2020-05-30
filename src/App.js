@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 
 class App extends Component {
-  render() {
+  render() {  
     return (
       <div>
         <NavBar></NavBar>
@@ -18,7 +18,7 @@ class App extends Component {
         </div>
       </div>
     );
-  }
+  } 
 }
 
 export default App;
