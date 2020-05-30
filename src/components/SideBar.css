@@ -13,3 +13,7 @@
   text-align: center;
   opacity: 0.8;
 }
+
+.orderItem {
+  text-align: left;
+}

@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 //import logo from './logo.svg';
 import "./App.css";
-import ProductList from "./components/ProductList.jsx";
-import NavBar from "./components/NavBar";
-import SideBar from "./components/SideBar";
+import ProductsPage from "./components/ProductsPage.jsx";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NavBar></NavBar>
-        <div>
-          <ProductList></ProductList>
-          <ProductList></ProductList>
-          <ProductList></ProductList>
-          <SideBar></SideBar>
-        </div>
+        <ProductsPage></ProductsPage>
       </div>
     );
   }
