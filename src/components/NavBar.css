@@ -1,8 +1,29 @@
 .navBar {
   list-style-type: none;
+  text-align: center;
+  background-color: #b4814a;
 }
 
 .navBar li {
   display: inline;
-  padding: 5px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 2px;
+  font-weight: bold;
+}
+
+a:link {
+  color: #335986;
+}
+
+a:visited {
+  color: #335986;
+}
+
+a:active {
+  background-color: silver;
+}
+
+.navBar li:hover {
+  background-color: rgb(185, 185, 185);
 }

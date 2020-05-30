@@ -3,3 +3,8 @@
   float: left;
   padding: 10px;
 }
+
+.list {
+  width: fit-content;
+  margin: 0 auto;
+}
