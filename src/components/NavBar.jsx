@@ -6,7 +6,7 @@ const NavBar = (props) => {
     <div>
       <ul className="navBar">
         <li>
-          <a href="#">Naruči</a>
+          <a href="#">Home</a>
         </li>
         <li>
           <a href="#">Products</a>
