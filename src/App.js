@@ -3,13 +3,17 @@ import React, { Component } from "react";
 import "./App.css";
 import ProductList from "./components/ProductList.jsx";
 import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
 
 class App extends Component {
   render() {
     return (
       <div>
         <NavBar></NavBar>
-        <ProductList></ProductList>
+        <div>
+          <ProductList></ProductList>
+          <SideBar></SideBar>
+        </div>
       </div>
     );
   }
