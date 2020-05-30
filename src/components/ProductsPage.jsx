@@ -5,9 +5,9 @@ import SideBar from "./SideBar.jsx";
 
 const ProductsPage = (props) => {
   const tempProducts = [
-    { product_name: "Nesto", product_price: "1KM" },
-    { product_name: "Nesto2", product_price: "2KM" },
-    { product_name: "Nesto3", product_price: "3KM" },
+    { product_name: "Nesto", product_price: "1KM", id:"1" },
+    { product_name: "Nesto2", product_price: "2KM" , id:"2" },
+    { product_name: "Nesto3", product_price: "3KM" , id:"3"},
     { product_name: "Nesto4", product_price: "1KM" },
     { product_name: "Nesto5", product_price: "2KM" },
     { product_name: "Nesto6", product_price: "3KM" },
