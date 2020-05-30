@@ -1,0 +1,11 @@
+.sideBar {
+  background-color: rgb(185, 185, 185);
+  height: 90%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  margin-right: 0.5em;
+  padding: 1em;
+  text-align: center;
+}

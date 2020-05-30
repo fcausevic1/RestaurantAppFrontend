@@ -21,7 +21,7 @@ a:visited {
 }
 
 a:active {
-  background-color: silver;
+  background-color: rgb(185, 185, 185);
 }
 
 .navBar li:hover {
