@@ -1,0 +1,8 @@
+.navBar {
+  list-style-type: none;
+}
+
+.navBar li {
+  display: inline;
+  padding: 5px;
+}
