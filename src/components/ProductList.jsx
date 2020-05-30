@@ -10,7 +10,7 @@ const ProductList = (props) => {
   ];
 
   return (
-    <div>
+    <div className="listContainer">
       <ul className="list">
         {products.map((product) => (
           <li key={product.product_name}>
