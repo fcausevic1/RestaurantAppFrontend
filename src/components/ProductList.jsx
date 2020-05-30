@@ -3,11 +3,7 @@ import Proizvod from "./Proizvod";
 import "./ProductList.css";
 
 const ProductList = (props) => {
-  const products = [
-    { product_name: "Nesto", product_price: "1KM" },
-    { product_name: "Nesto22", product_price: "2KM" },
-    { product_name: "Nesto33", product_price: "3KM" },
-  ];
+  const { products } = props;
 
   return (
     <div className="listContainer">
@@ -18,6 +14,14 @@ const ProductList = (props) => {
               naziv_proizvoda={product.product_name}
               cijena_proizvoda={product.product_price}
             />
+            <button
+              type="button"
+              onClick={() => {
+                props.onAddProduct(product);
+              }}
+            >
+              Add to order
+            </button>
           </li>
         ))}
       </ul>
