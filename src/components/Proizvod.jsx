@@ -3,7 +3,6 @@ import './Proizvod.css';
 
  import image from './cevap.jpg'
 const Proizvod = (props) => {
- //  const [nesto] = useState("Konj")
     return (
         
          <div className="omotac" id="rcorners">

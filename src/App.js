@@ -12,6 +12,8 @@ class App extends Component {
         <NavBar></NavBar>
         <div>
           <ProductList></ProductList>
+          <ProductList></ProductList>
+          <ProductList></ProductList>
           <SideBar></SideBar>
         </div>
       </div>
