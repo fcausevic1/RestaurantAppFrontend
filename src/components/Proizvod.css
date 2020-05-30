@@ -1,25 +1,25 @@
-
 img {
-    width: 8em;
-    height: 13em;
+  width: 9em;
+  height: 10em;
 }
 
 .cijena .naziv {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  color: #233d5b;
 }
 
 .omotac {
-    margin-left: 10px;
-    border-radius: 25px;
-    border: 2px solid rgb(0,0,0);
-    padding: 20px;
-    width: 8em;
-    
-    
-  }
+  margin-left: 10px;
+  border-radius: 25px;
+  border: 2px solid;
+  border-color: #335986;
+  padding: 1.2em;
+  width: 9.5em;
+  text-align: center;
+}
