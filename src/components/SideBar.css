@@ -1,6 +1,6 @@
 .sideBar {
-  border-radius:  25px;
-  border: 2px ;
+  border-radius: 25px;
+  border: 2px;
   border-color: #335986;
   background-color: rgb(185, 185, 185);
   height: 90%;
@@ -11,4 +11,5 @@
   margin-right: 0.5em;
   padding: 1em;
   text-align: center;
+  opacity: 0.8;
 }
