@@ -9,10 +9,10 @@ const ProductList = (props) => {
     <div className="listContainer">
       <ul className="list">
         {products.map((product) => (
-          <li key={product.name}>
+          <li key={product.product_name}>
             <Product
-              name={product.name}
-              price={product.price}
+              naziv_proizvoda={product.product_name}
+              cijena_proizvoda={product.product_price}
             />
             <button
               type="button"
