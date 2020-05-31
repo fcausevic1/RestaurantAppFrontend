@@ -9,7 +9,7 @@ const SideBar = (props) => {
       <ul className="OrderList">
         {orderedProducts.map(({ product, quantity }) => (
           <li className="orderItem" key={product.id}>
-            {product.product_name} {product.product_price} {quantity}
+            {product.product_name} {product.product_price} qty: {quantity}
             <span
               className="close"
               onClick={() => {
