@@ -1,29 +1,29 @@
 .navBar {
   list-style-type: none;
   text-align: center;
-  background-color: #b4814a;
+  background-color: #393f4d;
 }
 
 .navBar li {
   display: inline;
   padding-left: 1%;
   padding-right: 1%;
-  padding-top: 2px;
+  padding-top: 1px;
   font-weight: bold;
 }
 
 a:link {
-  color: #335986;
+  color: #feda6a;
 }
 
 a:visited {
-  color: #335986;
+  color: #feda6a;
 }
 
 a:active {
-  background-color: rgb(185, 185, 185);
+  background-color: #1d1e22;
 }
 
 .navBar li:hover {
-  background-color: rgb(185, 185, 185);
+  background-color: #1d1e22;
 }

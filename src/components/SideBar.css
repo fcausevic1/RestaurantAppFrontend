@@ -1,8 +1,9 @@
 .sideBar {
   border-radius: 25px;
   border: 2px;
-  border-color: #335986;
-  background-color: rgb(185, 185, 185);
+  color: #feda6a;
+  border-color: #393f4d;
+  background-color: #393f4d;
   height: 85%;
   width: 15%;
   position: fixed;
@@ -15,19 +16,22 @@
 }
 
 .orderItem {
-   text-align: left;
+  text-align: left;
+  font-weight: bold;
 }
 .close {
   cursor: pointer;
   width: 10px;
   padding: 2px 2px;
   margin-left: 20px;
-  color: darkred;
+  color: rgb(175, 0, 0);
   font-weight: bold;
-  
-
 }
 
 .close:hover {
   background-color: #eee;
+}
+
+.sideBar h1 {
+  color: #feda6a;
 }

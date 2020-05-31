@@ -15,6 +15,7 @@ const ProductList = (props) => {
               cijena_proizvoda={product.product_price}
             />
             <button
+              className="addBtn"
               type="button"
               onClick={() => {
                 props.onAddProduct(product);
