@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Product from "./Product";
 import "./ProductList.css";
 
@@ -10,10 +10,7 @@ const ProductList = (props) => {
       <ul className="list">
         {products.map((product) => (
           <li key={product.id}>
-            <Product
-              naziv_proizvoda={product.product_name}
-              cijena_proizvoda={product.product_price}
-            />
+            <Product name={product.name} price={product.price} />
             <button
               className="addBtn"
               type="button"
