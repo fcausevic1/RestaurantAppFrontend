@@ -40,10 +40,21 @@ const ProductsPage = (props) => {
   };
 
   const removeItemFromList = (newProduct) => {
-    const newOrderedItems = orderedProducts.filter((item) => {
-      return item !== newProduct;
-    });
-    setOrderedProducts(newOrderedItems);
+    var found;
+    for (let i = 0; i < orderedProducts.length; i++) {
+      if (newProduct.id === orderedProducts[i].product.id)
+        found = orderedProducts[i];
+    }
+    if (found.quantity - 1 === 0) {
+      console.log("NEMAGA");
+      const newOrderedItems = orderedProducts.filter((item) => {
+        return item.product.id !== newProduct.id;
+      });
+      setOrderedProducts(newOrderedItems);
+    } else {
+      found.quantity -= 1;
+      setOrderedProducts(orderedProducts.concat());
+    }
   };
 
   return (
