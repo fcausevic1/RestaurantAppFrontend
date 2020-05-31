@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./SideBar.css";
-import Proizvod from "./Product";
 
 const SideBar = (props) => {
   const { orderedProducts } = props;
@@ -8,9 +7,9 @@ const SideBar = (props) => {
     <div className="sideBar">
       <h1>Order list</h1>
       <ul className="OrderList">
-        {orderedProducts.map((product) => (
+        {orderedProducts.map(({ product, quantity }) => (
           <li className="orderItem" key={product.id}>
-            {product.product_name} {product.product_price}{" "}{props.quantity}
+            {product.product_name} {product.product_price} {quantity}
             <span
               className="close"
               onClick={() => {

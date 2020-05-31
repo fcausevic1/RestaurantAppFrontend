@@ -20,26 +20,18 @@ const ProductsPage = (props) => {
   const [orderedProducts, setOrderedProducts] = useState([]);
 
   const onAddProduct = (newProduct) => {
-    /*if (orderedProducts.indexOf(newProduct.id)) {
-      console.log("NASAO");
-      const foundProduct = orderedProducts.find((item) => {
-        return newProduct === item;
-      });
-      foundProduct.quantity += 1;
-      //
-    } else
-      setOrderedProducts(
-        orderedProducts.concat({ product: newProduct, quantity: 1 })
-      );
-    console.log("NEMA");*/
-
     var found = false;
-    orderedProducts.forEach((element) => {
-      if (newProduct.id === element.id) {
-        element.quantity += 1;
+    for (let i = 0; i < orderedProducts.length; i++) {
+      if (newProduct.id === orderedProducts[i].product.id) {
+        orderedProducts[i].quantity += 1;
         found = true;
+        break;
       }
-    });
+    }
+    console.log(orderedProducts);
+
+    setOrderedProducts(orderedProducts.concat());
+
     if (!found) {
       setOrderedProducts(
         orderedProducts.concat({ product: newProduct, quantity: 1 })
