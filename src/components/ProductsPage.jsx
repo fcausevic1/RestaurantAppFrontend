@@ -29,7 +29,6 @@ const ProductsPage = (props) => {
         break;
       }
     }
-    console.log(orderedProducts);
 
     setOrderedProducts(orderedProducts.concat());
 

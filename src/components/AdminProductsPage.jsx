@@ -27,6 +27,11 @@ const AdminProductsPage = (props) => {
     setProducts(newProducts.concat());
   };
 
+  const addProduct = (name, price) => {
+    var product = { name, price };
+    setProducts(products.concat(product));
+  };
+
   return (
     <div>
       <NavBar></NavBar>
@@ -35,7 +40,7 @@ const AdminProductsPage = (props) => {
           products={products}
           removeItemFromList={removeItemFromList}
         ></AdminProductList>
-        <AdminSideBar></AdminSideBar>
+        <AdminSideBar addProduct={addProduct}></AdminSideBar>
       </div>
     </div>
   );
