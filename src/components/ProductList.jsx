@@ -9,7 +9,7 @@ const ProductList = (props) => {
     <div className="listContainer">
       <ul className="list">
         {products.map((product) => (
-          <li key={product.product_name}>
+          <li key={product.id}>
             <Product
               naziv_proizvoda={product.product_name}
               cijena_proizvoda={product.product_price}

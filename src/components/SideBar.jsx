@@ -9,8 +9,8 @@ const SideBar = (props) => {
       <h1>Order list</h1>
       <ul className="OrderList">
         {orderedProducts.map((product) => (
-          <li className="orderItem" key={product.product_name}>
-            {product.product_name} {product.product_price}{" "}
+          <li className="orderItem" key={product.id}>
+            {product.product_name} {product.product_price}{" "}{props.quantity}
             <span
               className="close"
               onClick={() => {
