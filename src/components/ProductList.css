@@ -2,6 +2,7 @@
   display: inline;
   float: left;
   padding: 10px;
+  text-align: center;
 }
 
 .list {
@@ -10,5 +11,17 @@
 }
 
 .listContainer {
-  width: 85%;
+  width: 83%;
+}
+
+.addBtn {
+  font-weight: bold;
+  color: #393f4d;
+  background-color: #feda6a;
+  border-radius: 9px;
+  margin-top: 2px;
+}
+
+.addBtn:hover {
+  transform: scale(1.1);
 }
