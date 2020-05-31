@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Product.css";
 
 import image from "./cevap.jpg";
 const Proizvod = (props) => {
-const state = {id:props.id};
-
   return (
     <div className="omotac" id="rcorners">
       <div className="slika">
-        <img src={image}></img>
+        <img src={image} alt=""></img>
       </div>
       <div className="naziv">
-        <h1>{props.naziv_proizvoda}</h1>
+        <h1>{props.name}</h1>
       </div>
       <div className="cijena">
-        <h1>{props.cijena_proizvoda}</h1>
+        <h1>{props.price}</h1>
       </div>
     </div>
   );

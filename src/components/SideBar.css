@@ -15,6 +15,10 @@
   opacity: 0.8;
 }
 
+.sideBar h1 {
+  text-decoration: underline;
+}
+
 .orderItem {
   text-align: left;
   font-weight: bold;

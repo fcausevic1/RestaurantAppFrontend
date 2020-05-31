@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SideBar.css";
 
 const SideBar = (props) => {
@@ -9,7 +9,7 @@ const SideBar = (props) => {
       <ul className="OrderList">
         {orderedProducts.map(({ product, quantity }) => (
           <li className="orderItem" key={product.id}>
-            {product.product_name} {product.product_price} qty: {quantity}
+            {product.name} {product.price} qty: {quantity}
             <span
               className="close"
               onClick={() => {
