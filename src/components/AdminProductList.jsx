@@ -15,7 +15,7 @@ const ProductList = (props) => {
               className="delBtn"
               type="button"
               onClick={() => {
-                props.onAddProduct(product);
+                props.removeItemFromList(product);
               }}
             >
               Delete

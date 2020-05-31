@@ -20,12 +20,22 @@ const AdminProductsPage = (props) => {
     getProducts();
   }, []);
 
+  const removeItemFromList = (newProduct) => {
+    const newProducts = products.filter((item) => {
+      return item.id !== newProduct.id;
+    });
+    setProducts(newProducts.concat());
+  };
+
   return (
     <div>
       <NavBar></NavBar>
       <div>
-        <AdminProductList products={products}></AdminProductList>
-        <AdminSideBar orderedProducts={orderedProducts}></AdminSideBar>
+        <AdminProductList
+          products={products}
+          removeItemFromList={removeItemFromList}
+        ></AdminProductList>
+        <AdminSideBar></AdminSideBar>
       </div>
     </div>
   );

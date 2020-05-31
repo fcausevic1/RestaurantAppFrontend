@@ -47,7 +47,6 @@ const ProductsPage = (props) => {
         found = orderedProducts[i];
     }
     if (found.quantity - 1 === 0) {
-      console.log("NEMAGA");
       const newOrderedItems = orderedProducts.filter((item) => {
         return item.product.id !== newProduct.id;
       });

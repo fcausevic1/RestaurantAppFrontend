@@ -13,6 +13,7 @@
   padding: 1em;
   text-align: center;
   opacity: 0.8;
+  font-size: large;
 }
 
 .addBtn {
@@ -21,8 +22,37 @@
   background-color: #feda6a;
   border-radius: 9px;
   text-align: center;
+  font-size: large;
+  margin-top: 20px;
 }
 
-.addBtn:hover {
+.addBtn:hover,
+.confirmBtn:hover,
+.cancelBtn:hover {
   transform: scale(1.1);
+}
+
+.margin {
+  margin-top: 10px;
+}
+
+.cancelBtn {
+  margin-right: 10%;
+  font-weight: bold;
+  color: silver;
+  background-color: rgb(175, 0, 0);
+  border-radius: 9px;
+  font-size: large;
+  text-align: center;
+  width: 5em;
+}
+
+.confirmBtn {
+  font-weight: bold;
+  color: #393f4d;
+  background-color: #feda6a;
+  border-radius: 9px;
+  text-align: center;
+  font-size: large;
+  width: 5em;
 }
