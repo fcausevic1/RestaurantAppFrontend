@@ -1,6 +1,6 @@
 img {
   width: 9em;
-  height: 10em;
+  height: 9em;
 }
 
 .cijena .naziv {
@@ -22,4 +22,5 @@ h1 {
   padding: 1.2em;
   width: 9.5em;
   text-align: center;
+  height: 14em;
 }
