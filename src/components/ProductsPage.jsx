@@ -8,19 +8,35 @@ const ProductsPage = (props) => {
     { product_name: "Nesto", product_price: "1KM", id: "1" },
     { product_name: "Nesto2", product_price: "2KM", id: "2" },
     { product_name: "Nesto3", product_price: "3KM", id: "3" },
-    { product_name: "Nesto4", product_price: "1KM" },
-    { product_name: "Nesto5", product_price: "2KM" },
-    { product_name: "Nesto6", product_price: "3KM" },
-    { product_name: "Nesto7", product_price: "1KM" },
-    { product_name: "Nesto8", product_price: "2KM" },
-    { product_name: "Nesto9", product_price: "3KM" },
+    { product_name: "Nesto4", product_price: "1KM", id: "4" },
+    { product_name: "Nesto5", product_price: "2KM", id: "5" },
+    { product_name: "Nesto6", product_price: "3KM", id: "6" },
+    { product_name: "Nesto7", product_price: "1KM", id: "7" },
+    { product_name: "Nesto8", product_price: "2KM", id: "8" },
+    { product_name: "Nesto9", product_price: "3KM", id: "9" },
   ];
 
   const [products, setProducts] = useState(tempProducts);
   const [orderedProducts, setOrderedProducts] = useState([]);
 
   const onAddProduct = (newProduct) => {
-    setOrderedProducts(orderedProducts.concat(newProduct));
+    var found = false;
+    for (let i = 0; i < orderedProducts.length; i++) {
+      if (newProduct.id === orderedProducts[i].product.id) {
+        orderedProducts[i].quantity += 1;
+        found = true;
+        break;
+      }
+    }
+    console.log(orderedProducts);
+
+    setOrderedProducts(orderedProducts.concat());
+
+    if (!found) {
+      setOrderedProducts(
+        orderedProducts.concat({ product: newProduct, quantity: 1 })
+      );
+    }
   };
 
   const removeItemFromList = (newProduct) => {
