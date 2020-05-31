@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 //import logo from './logo.svg';
 import "./App.css";
-import ProductsPage from "./components/ProductsPage.jsx";
+import AdminProductsPage from "./components/AdminProductsPage.jsx";
 
 class App extends Component {
-  render() {  
+  render() {
     return (
       <div>
-        <ProductsPage></ProductsPage>
+        <AdminProductsPage></AdminProductsPage>
       </div>
     );
-  } 
+  }
 }
 
 export default App;

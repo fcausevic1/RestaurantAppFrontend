@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-import "./ProductList.css";
+import "./AdminProductList.css";
 
 const ProductList = (props) => {
   const { products } = props;
@@ -18,7 +18,7 @@ const ProductList = (props) => {
                 props.onAddProduct(product);
               }}
             >
-              Add to order
+              Delete
             </button>
           </li>
         ))}

@@ -1,0 +1,28 @@
+.sideBar {
+  border-radius: 25px;
+  border: 2px;
+  color: #feda6a;
+  border-color: #393f4d;
+  background-color: #393f4d;
+  height: 85%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  margin-right: 0.5em;
+  padding: 1em;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.addBtn {
+  font-weight: bold;
+  color: #393f4d;
+  background-color: #feda6a;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.addBtn:hover {
+  transform: scale(1.1);
+}
