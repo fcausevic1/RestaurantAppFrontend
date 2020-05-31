@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-import "./ProductList.css";
+import "./AdminProductList.css";
 
 const ProductList = (props) => {
   const { products } = props;
@@ -9,16 +9,21 @@ const ProductList = (props) => {
     <div className="listContainer">
       <ul className="list">
         {products.map((product) => (
-          <li key={product.id}>
+          <li
+            key={product.id}
+            onClick={() => {
+              props.setSelectedProduct(product);
+            }}
+          >
             <Product name={product.name} price={product.price} />
             <button
               className="delBtn"
               type="button"
               onClick={() => {
-                props.onAddProduct(product);
+                props.removeItemFromList(product);
               }}
             >
-              Add to order
+              Delete
             </button>
           </li>
         ))}

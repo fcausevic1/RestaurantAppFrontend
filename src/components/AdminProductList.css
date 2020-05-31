@@ -1,0 +1,27 @@
+.list li {
+  display: inline;
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+
+.list {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.listContainer {
+  width: 83%;
+}
+
+.delBtn {
+  font-weight: bold;
+  color: silver;
+  background-color: rgb(175, 0, 0);
+  border-radius: 9px;
+  margin-top: 2px;
+}
+
+.delBtn:hover {
+  transform: scale(1.1);
+}
