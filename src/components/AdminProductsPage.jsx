@@ -6,7 +6,12 @@ import ProductsService from "./ProductsService.js";
 
 const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);
-  const [orderedProducts, setOrderedProducts] = useState([]);
+  const [orderedProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState("");
+
+  const refreshSelected = (product) => {
+    setSelectedProduct(product);
+  };
 
   const getProducts = () => {
     const fetchData = async () => {
@@ -22,7 +27,7 @@ const AdminProductsPage = (props) => {
 
   const removeItemFromList = (newProduct) => {
     const newProducts = products.filter((item) => {
-      return item.id !== newProduct.id;
+      return item.name !== newProduct.name;
     });
     setProducts(newProducts.concat());
   };
@@ -32,6 +37,14 @@ const AdminProductsPage = (props) => {
     setProducts(products.concat(product));
   };
 
+  const editProduct = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const confirmEdit = (product) => {
+    // poslat
+  };
+
   return (
     <div>
       <NavBar></NavBar>
@@ -39,8 +52,14 @@ const AdminProductsPage = (props) => {
         <AdminProductList
           products={products}
           removeItemFromList={removeItemFromList}
+          editProduct={editProduct}
+          setSelectedProduct={setSelectedProduct}
         ></AdminProductList>
-        <AdminSideBar addProduct={addProduct}></AdminSideBar>
+        <AdminSideBar
+          addProduct={addProduct}
+          selectedProduct={selectedProduct}
+          refreshSelected={refreshSelected}
+        ></AdminSideBar>
       </div>
     </div>
   );

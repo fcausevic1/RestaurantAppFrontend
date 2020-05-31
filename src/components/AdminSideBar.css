@@ -16,13 +16,13 @@
   font-size: large;
 }
 
-.addBtn {
+.addLabel {
   font-weight: bold;
-  color: #393f4d;
-  background-color: #feda6a;
-  border-radius: 9px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  color: #feda6a;
   text-align: center;
-  font-size: large;
+
   margin-top: 20px;
 }
 

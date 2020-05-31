@@ -9,9 +9,8 @@ const SideBar = (props) => {
 
   return (
     <div className="sideBar">
-      <button className="addBtn">Add product</button>
+      <h1 className="addLabel">Add product</h1>
       <form>
-        <br></br>
         <label htmlFor="pname" className="margin">
           Product name:{" "}
         </label>
@@ -37,7 +36,58 @@ const SideBar = (props) => {
               props.addProduct(name, price);
             }}
           >
-            Confirm
+            Add
+          </button>
+        </div>
+      </form>
+      <br></br>
+      <h1 className="addLabel">Edit product</h1>
+      <form>
+        <label htmlFor="pname" className="margin">
+          Product name:{" "}
+        </label>
+        <input
+          type="text"
+          name="pname"
+          id="pname"
+          className="margin"
+          defaultValue={props.selectedProduct.name}
+          onChange={(event) => {
+            props.selectedProduct.name = event.target.value;
+          }}
+        />
+        <br></br>
+        <label htmlFor="pprice" className="margin">
+          {" "}
+          <br></br>
+          Product price:{" "}
+        </label>
+        <br></br>
+        <input
+          type="text"
+          name="pprice"
+          id="pprice"
+          className="margin"
+          defaultValue={props.selectedProduct.price}
+          onChange={(event) => {
+            // refresh on edit
+          }}
+        />
+        <br></br>
+        <div className="margin">
+          <button
+            className="cancelBtn margin"
+            onClick={(event) => event.preventDefault()}
+          >
+            Cancel
+          </button>
+          <button
+            className="confirmBtn margin"
+            onClick={(event) => {
+              event.preventDefault();
+            }}
+          >
+            Edit
           </button>
         </div>
       </form>
