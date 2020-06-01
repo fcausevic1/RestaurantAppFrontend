@@ -1,6 +1,6 @@
 .list li {
   display: inline;
-  float: left;
+  /*float: left;*/
   padding: 10px;
   text-align: center;
 }
