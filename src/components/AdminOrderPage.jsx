@@ -39,15 +39,9 @@ const AdminOrderPage = (props) => {
 
   return (
     <div>
+      <NavBar></NavBar>
       <div>
-        <NavBar></NavBar>
-      </div>
-      <div>
-        <table>
-          <OrderList orders={orders}></OrderList>
-        </table>
-      </div>
-      <div>
+        <OrderList orders={orders}></OrderList>
         <OrderSideBar></OrderSideBar>
       </div>
     </div>

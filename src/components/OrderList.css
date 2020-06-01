@@ -1,0 +1,9 @@
+.tableContainer {
+  width: 83%;
+  float: left;
+}
+
+.table {
+  width: fit-content;
+  margin: 0 auto;
+}

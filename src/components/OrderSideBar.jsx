@@ -1,15 +1,13 @@
 import React from "react";
-import "./SideBar.css";
+import "./OrderSideBar.css";
 
-const SideBar = (props) => {
+const OrderSideBar = (props) => {
   return (
     <div className="sideBar">
       <h1>Order list</h1>
-      <ul className="OrderList">
-        <li className="orderItem"></li>
-      </ul>
+      <ul className="OrderList"></ul>
     </div>
   );
 };
 
-export default SideBar;
+export default OrderSideBar;
