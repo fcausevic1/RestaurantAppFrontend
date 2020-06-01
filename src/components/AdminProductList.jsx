@@ -9,13 +9,14 @@ const ProductList = (props) => {
     <div className="listContainer">
       <ul className="list">
         {products.map((product) => (
-          <li
-            key={product.id}
-            onClick={() => {
-              props.setSelectedProduct(product);
-            }}
-          >
-            <Product name={product.name} price={product.price} />
+          <li key={product.id}>
+            <div
+              onClick={() => {
+                props.setSelectedProduct(product);
+              }}
+            >
+              <Product name={product.name} price={product.price} />
+            </div>
             <button
               className="delBtn"
               type="button"
