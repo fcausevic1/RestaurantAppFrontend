@@ -2,13 +2,13 @@ import React from "react";
 import "./Order.css";
 const Order = (props) => {
   return (
-    <tr>
-      <td>{props.id}</td>
-      <td>{props.date}</td>
-      <td>{props.completion}</td>
-      <td>{props.user}</td>
-      <td>{props.coupon}</td>
-    </tr>
+    <ul>
+      <li className="border">{props.id}</li>
+      <li className="border">{props.date}</li>
+      <li className="border">{props.completion}</li>
+      <li className="border">{props.user}</li>
+      <li className="border">{props.coupon}</li>
+    </ul>
   );
 };
 

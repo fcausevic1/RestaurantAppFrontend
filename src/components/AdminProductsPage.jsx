@@ -9,9 +9,9 @@ const AdminProductsPage = (props) => {
   const [orderedProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState("");
 
-  const refreshSelected = (product) => {
-    setSelectedProduct(product);
-  };
+  // const refreshSelected = (product) => {
+  //   setSelectedProduct(product);
+  // };
 
   const getProducts = () => {
     const fetchData = async () => {
@@ -43,10 +43,6 @@ const AdminProductsPage = (props) => {
     setProducts(products.concat());
   };
 
-  const confirmEdit = (product) => {
-    // poslat
-  };
-
   return (
     <div>
       <NavBar></NavBar>
@@ -59,7 +55,7 @@ const AdminProductsPage = (props) => {
         <AdminSideBar
           addProduct={addProduct}
           selectedProduct={selectedProduct}
-          refreshSelected={refreshSelected}
+          //refreshSelected={refreshSelected}
           editProduct={editProduct}
         ></AdminSideBar>
       </div>
