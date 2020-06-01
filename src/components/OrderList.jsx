@@ -7,28 +7,26 @@ const OrderList = (props) => {
 
   return (
     <div className="tableContainer">
-      <table className="table">
-        <tbody>
-          {orders.map((order) => (
-            <tr
-              key={order.id}
-              onClick={() => {
-                props.setSelectedOrder(order);
-              }}
-            >
-              <Order
-                setSelectedOrder
-                id={order.id}
-                date={order.date}
-                completion={order.completion}
-                user={order.user}
-                coupon={order.coupon}
-                items={order.items}
-              ></Order>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <ul className="table">
+        {orders.map((order) => (
+          <li
+            key={order.id}
+            onClick={() => {
+              props.setSelectedOrder(order);
+            }}
+          >
+            <Order
+              setSelectedOrder
+              id={order.id}
+              date={order.date}
+              completion={order.completion}
+              user={order.user}
+              coupon={order.coupon}
+              items={order.items}
+            ></Order>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
