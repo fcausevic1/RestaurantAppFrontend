@@ -4,8 +4,11 @@ import "./AdminSideBar.css";
 const SideBar = (props) => {
   const { orderedProducts } = props;
 
-  var name = "";
-  var price = "";
+  var name;
+  var price;
+
+  var editedName = "";
+  var editedPrice = "";
 
   return (
     <div className="sideBar">
@@ -18,7 +21,6 @@ const SideBar = (props) => {
         <br></br>
         <label htmlFor="pprice" className="margin">
           {" "}
-          <br></br>
           Product price:{" "}
         </label>
         <br></br>
@@ -32,7 +34,6 @@ const SideBar = (props) => {
               event.preventDefault();
               name = document.getElementById("pname").value;
               price = document.getElementById("pprice").value;
-              console.log(name, price);
               props.addProduct(name, price);
             }}
           >
@@ -53,13 +54,11 @@ const SideBar = (props) => {
           className="margin"
           defaultValue={props.selectedProduct.name}
           onChange={(event) => {
-            props.selectedProduct.name = event.target.value;
+            editedName = event.target.value;
           }}
         />
-        <br></br>
         <label htmlFor="pprice" className="margin">
           {" "}
-          <br></br>
           Product price:{" "}
         </label>
         <br></br>
@@ -70,7 +69,7 @@ const SideBar = (props) => {
           className="margin"
           defaultValue={props.selectedProduct.price}
           onChange={(event) => {
-            // refresh on edit
+            editedPrice = event.target.value;
           }}
         />
         <br></br>
@@ -85,6 +84,7 @@ const SideBar = (props) => {
             className="confirmBtn margin"
             onClick={(event) => {
               event.preventDefault();
+              props.selectedProduct({ editedName, editedPrice });
             }}
           >
             Edit
