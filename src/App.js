@@ -3,12 +3,13 @@ import React, { Component } from "react";
 import "./App.css";
 import AdminProductsPage from "./components/AdminProductsPage.jsx";
 import AdminOrderPage from "./components/AdminOrderPage.jsx";
-
+import UsersList from "./components/UsersList.jsx";
+import AdminUserPage from "./components/AdminUserPage.jsx";
 class App extends Component {
   render() {
     return (
       <div>
-        <AdminOrderPage></AdminOrderPage>
+        <AdminUserPage></AdminUserPage>
       </div>
     );
   }
