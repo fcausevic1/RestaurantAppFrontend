@@ -1,9 +1,4 @@
-th,
-td {
-  border: 1px solid black;
-}
-
-td {
+.border {
   width: 150px;
   text-align: center;
   border: 1px solid black;
