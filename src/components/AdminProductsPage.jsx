@@ -37,8 +37,10 @@ const AdminProductsPage = (props) => {
     setProducts(products.concat(product));
   };
 
-  const editProduct = (product) => {
-    setSelectedProduct(product);
+  const editProduct = (product, editedName, editedPrice) => {
+    product.name = editedName;
+    product.price = editedPrice;
+    setProducts(products.concat());
   };
 
   const confirmEdit = (product) => {
@@ -52,13 +54,13 @@ const AdminProductsPage = (props) => {
         <AdminProductList
           products={products}
           removeItemFromList={removeItemFromList}
-          editProduct={editProduct}
           setSelectedProduct={setSelectedProduct}
         ></AdminProductList>
         <AdminSideBar
           addProduct={addProduct}
           selectedProduct={selectedProduct}
           refreshSelected={refreshSelected}
+          editProduct={editProduct}
         ></AdminSideBar>
       </div>
     </div>

@@ -27,7 +27,12 @@ const SideBar = (props) => {
         <input type="text" name="pprice" id="pprice" className="margin" />
         <br></br>
         <div className="margin">
-          <button className="cancelBtn margin">Cancel</button>
+          <button
+            className="cancelBtn margin"
+            onClick={(event) => event.preventDefault()}
+          >
+            Cancel
+          </button>
           <button
             className="confirmBtn margin"
             onClick={(event) => {
@@ -44,28 +49,28 @@ const SideBar = (props) => {
       <br></br>
       <h1 className="addLabel">Edit product</h1>
       <form>
-        <label htmlFor="pname" className="margin">
+        <label htmlFor="peditname" className="margin">
           Product name:{" "}
         </label>
         <input
           type="text"
-          name="pname"
-          id="pname"
+          name="peditname"
+          id="peditname"
           className="margin"
           defaultValue={props.selectedProduct.name}
           onChange={(event) => {
             editedName = event.target.value;
           }}
         />
-        <label htmlFor="pprice" className="margin">
+        <label htmlFor="peditprice" className="margin">
           {" "}
           Product price:{" "}
         </label>
         <br></br>
         <input
           type="text"
-          name="pprice"
-          id="pprice"
+          name="peditprice"
+          id="peditprice"
           className="margin"
           defaultValue={props.selectedProduct.price}
           onChange={(event) => {
@@ -84,7 +89,9 @@ const SideBar = (props) => {
             className="confirmBtn margin"
             onClick={(event) => {
               event.preventDefault();
-              props.selectedProduct({ editedName, editedPrice });
+              editedName = document.getElementById("peditname").value;
+              editedPrice = document.getElementById("peditprice").value;
+              props.editProduct(props.selectedProduct, editedName, editedPrice);
             }}
           >
             Edit
