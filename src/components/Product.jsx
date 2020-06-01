@@ -12,7 +12,7 @@ const Proizvod = (props) => {
         <h1>{props.name}</h1>
       </div>
       <div className="cijena">
-        <h1>{props.price}</h1>
+        <h1>{props.price} KM</h1>
       </div>
     </div>
   );
