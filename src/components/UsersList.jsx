@@ -17,7 +17,7 @@ const UserList = (props) => {
               name={user.name}
               lastName={user.lastName}
               email={user.email}
-              adress={user.adress}
+              address={user.address}
               username={user.username}
               password={user.password}
               role={user.role}

@@ -3,8 +3,14 @@ const ProductsService = (() => {
     const products = await fetch("/api/products").then((response) => {
       return response.json();
     });
-
     return products;
+  };
+
+  const getUsers = async () => {
+    const users = await fetch("/api/users").then((response) => {
+      return response.json();
+    });
+    return users;
   };
   const addProduct = async (product) => {
     console.log(product);
@@ -12,7 +18,7 @@ const ProductsService = (() => {
 
     const products = await fetch("/api/product", {
       headers: {
-        "Accept": "application/json",
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       method: "POST",
@@ -36,10 +42,24 @@ const ProductsService = (() => {
     return products;
   };
 
+  const removeUser = async (user) => {
+    //   console.log("P", user);
+
+    const userToRemove = await fetch("/api/user/" + user.id, {
+      method: "DELETE",
+    }).then((response) => {
+      console.log(response);
+    });
+
+    return userToRemove;
+  };
+
   return {
     getProducts: getProducts,
+    getUsers: getUsers,
     addProduct: addProduct,
     removeProduct: removeProduct,
+    removeUser: removeUser,
   };
 })();
 export default ProductsService;
