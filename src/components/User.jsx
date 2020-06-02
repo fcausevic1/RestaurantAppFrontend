@@ -9,7 +9,7 @@ const User = (props) => {
       <li className="border">{props.name}</li>
       <li className="border">{props.lastName}</li>
       <li className="border">{props.email}</li>
-      <li className="border">{props.adress}</li>
+      <li className="border">{props.address}</li>
       <li className="border">{props.username}</li>
       <li className="border">{props.password}</li>
       <li className="border">{props.role}</li>

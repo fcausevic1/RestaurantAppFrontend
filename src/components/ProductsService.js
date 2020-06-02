@@ -1,10 +1,18 @@
+
+
 const ProductsService = (() => {
   const getProducts = async () => {
     const products = await fetch("/api/products").then((response) => {
       return response.json();
     });
-
     return products;
+  };
+
+  const getUsers = async () => {
+    const users = await fetch("/api/users").then((response) => {
+      return response.json();
+    });
+    return users;
   };
   const addProduct = async (product) => {
     console.log(product);
@@ -38,6 +46,7 @@ const ProductsService = (() => {
 
   return {
     getProducts: getProducts,
+    getUsers: getUsers,
     addProduct: addProduct,
     removeProduct: removeProduct,
   };

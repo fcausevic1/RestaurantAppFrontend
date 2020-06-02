@@ -14,7 +14,6 @@ const AdminProductsPage = (props) => {
     const fetchData = async () => {
       const data = await ProductsService.getProducts();
       console.log(data);
-
       setProducts(data);
     };
     fetchData();
@@ -27,7 +26,7 @@ const AdminProductsPage = (props) => {
   const removeItemFromList = (product) => {
     ProductsService.removeProduct(product);
     getProducts();
-    console.log("DD", products);
+    //   console.log("DD", products);
   };
 
   const addProduct = (name, price) => {
