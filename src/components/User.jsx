@@ -17,7 +17,7 @@ const User = (props) => {
         className="close"
         onClick={() => {
           userId = props.id;
-          props.mediatorRemoveUserFromList.removeUserFromList(userId);
+          props.mediatorRemoveUserFromList.removeUserFromList(props);
         }}
       >
         x

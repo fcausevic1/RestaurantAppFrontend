@@ -5,25 +5,15 @@ import UserSideBar from "../UserSideBar.jsx";
 import ProductsService from "../ProductsService.js";
 
 const AdminUserPage = (props) => {
-
   var [users, setUsers] = useState([]);
 
-  const removeUserFromList = (userId) => {
-    const newUsers = users.filter((item) => {
-      return item.id !== userId;
-    });
-    setUsers(newUsers.concat());
-  };
-
   const getUsers = () => {
-
     const fetchData = async () => {
       console.log(ProductsService.getUsers());
 
       const data = await ProductsService.getUsers();
       setUsers(data);
       console.log(data);
-
     };
     fetchData();
   };
@@ -32,7 +22,14 @@ const AdminUserPage = (props) => {
     getUsers();
   }, []);
 
-
+  const removeUserFromList = (user) => {
+    // const newUsers = users.filter((item) => {
+    //  return item.id !== userId;
+    //});
+    ProductsService.removeUser(user);
+    //setUsers(newUsers.concat());
+    getUsers();
+  };
 
   return (
     <div>
