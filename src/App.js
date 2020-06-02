@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AdminUserPage></AdminUserPage>
+        <AdminProductsPage></AdminProductsPage>
       </div>
     );
   }

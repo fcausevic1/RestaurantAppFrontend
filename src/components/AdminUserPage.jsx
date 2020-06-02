@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import UsersList from "./UsersList.jsx";
 import NavBar from "./NavBar.jsx";
 import OrderSideBar from "./OrderSideBar.jsx";
+import AdminSideBar from "./AdminSideBar.jsx";
+import UserSideBar from "./UserSideBar.jsx";
 
 const AdminUserPage = (props) => {
   const tempUsers = [
@@ -144,7 +146,7 @@ const AdminUserPage = (props) => {
           removeUserFromList={removeUserFromList}
         ></UsersList>
       </div>
-      <OrderSideBar></OrderSideBar>
+      <UserSideBar></UserSideBar>
     </div>
   );
 };
