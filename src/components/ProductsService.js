@@ -23,9 +23,23 @@ const ProductsService = (() => {
 
     return products;
   };
+
+  const removeProduct = async (product) => {
+    console.log("P", product);
+
+    const products = await fetch("/api/product/" + product.id, {
+      method: "DELETE",
+    }).then((response) => {
+      console.log(response);
+    });
+
+    return products;
+  };
+
   return {
     getProducts: getProducts,
     addProduct: addProduct,
+    removeProduct: removeProduct,
   };
 })();
 export default ProductsService;
