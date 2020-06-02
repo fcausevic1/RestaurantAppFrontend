@@ -2,12 +2,12 @@
   display: inline;
   padding: 10px;
   text-align: center;
+  float: left;
 }
 
 .list {
   width: fit-content;
   margin: 0 auto;
-  float: left;
 }
 
 .listContainer {
