@@ -1,16 +1,20 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 //import logo from './logo.svg';
 import "./App.css";
-import AdminProductsPage from "./components/AdminProductsPage.jsx";
-import AdminOrderPage from "./components/AdminOrderPage.jsx";
-import UsersList from "./components/UsersList.jsx";
-import AdminUserPage from "./components/AdminUserPage.jsx";
+import AdminProductsPage from "./components/Admin/AdminProductsPage.jsx";
+import AdminOrderPage from "./components/Admin/AdminOrderPage.jsx";
+import AdminUserPage from "./components/Admin/AdminUserPage.jsx";
+import ProductsPage from "./components/User/ProductsPage.jsx";
 class App extends Component {
   render() {
     return (
-      <div>
-        <AdminProductsPage></AdminProductsPage>
-      </div>
+      <Router>
+        <Route path="/user/products" component={ProductsPage}></Route>
+        <Route path="/admin/products" component={AdminProductsPage}></Route>
+        <Route path="/admin/users" component={AdminUserPage}></Route>
+        <Route path="/admin/orders" component={AdminOrderPage}></Route>
+      </Router>
     );
   }
 }

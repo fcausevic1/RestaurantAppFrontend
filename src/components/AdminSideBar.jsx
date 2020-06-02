@@ -2,8 +2,6 @@ import React from "react";
 import "./AdminSideBar.css";
 
 const SideBar = (props) => {
-  const { orderedProducts } = props;
-
   var name;
   var price;
 

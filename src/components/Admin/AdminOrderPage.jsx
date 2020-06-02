@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar.jsx";
-import OrderSideBar from "./OrderSideBar.jsx";
-import OrderList from "./OrderList.jsx";
+import NavBar from "../NavBar.jsx";
+import OrderSideBar from "../OrderSideBar.jsx";
+import OrderList from "../OrderList.jsx";
 
 const AdminOrderPage = (props) => {
   const tempOrders = [
@@ -50,7 +50,7 @@ const AdminOrderPage = (props) => {
       ],
     },
   ];
-  const [orders, setOrders] = useState(tempOrders);
+  const [orders] = useState(tempOrders);
   const [selectedOrder, setSelectedOrder] = useState("");
 
   const refreshSelected = (order) => {

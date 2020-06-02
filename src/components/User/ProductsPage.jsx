@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProductList from "./ProductList.jsx";
-import NavBar from "./NavBar.jsx";
-import SideBar from "./SideBar.jsx";
-import ProductsService from "./ProductsService.js";
+import ProductList from "../ProductList.jsx";
+import SideBar from "../SideBar.jsx";
+import ProductsService from "../ProductsService.js";
+import NavBar from "../NavBar.jsx";
 
 const ProductsPage = (props) => {
   const [products, setProducts] = useState([]);

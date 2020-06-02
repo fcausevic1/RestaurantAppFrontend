@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import AdminProductList from "./AdminProductList.jsx";
-import NavBar from "./NavBar.jsx";
-import AdminSideBar from "./AdminSideBar.jsx";
-import ProductsService from "./ProductsService.js";
+import AdminProductList from "../AdminProductList.jsx";
+import NavBar from "../NavBar.jsx";
+import AdminSideBar from "../AdminSideBar.jsx";
+import ProductsService from "../ProductsService.js";
 
 const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);
-  const [orderedProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState("");
 
   // const refreshSelected = (product) => {
@@ -33,8 +32,10 @@ const AdminProductsPage = (props) => {
   };
 
   const addProduct = (name, price) => {
-    var product = { name, price };
-    setProducts(products.concat(product));
+    var product = { name, price: parseInt(price), categoryId: 1, description: "desc" };
+    ProductsService.addProduct(product);
+    //setProducts(products.concat(product));
+    getProducts()
   };
 
   const editProduct = (product, editedName, editedPrice) => {
