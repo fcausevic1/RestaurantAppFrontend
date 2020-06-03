@@ -9,12 +9,22 @@ const OrderSideBar = (props) => {
     <div className="sideBar">
       <h1>Order list</h1>
       <ul className="OrderList">
-        {orderItems.map(({ product, quantity }) => (
-          <li className="orderItem" key={product.id}>
-            {product.name} {product.price} qty: {quantity}
+        {orderItems.map((orderItem) => (
+          <li className="orderItem" key={orderItem.id}>
+            {orderItem.id} qty: {orderItem.quantity}
           </li>
         ))}
       </ul>
+      <button
+        className="deleteBtn margin"
+        onClick={(event) => {
+          event.preventDefault();
+          props.deleteOrder(props.selectedOrder);
+        }}
+      >
+        Delete
+      </button>
+      <button className="completeBtn margin">Complete</button>
     </div>
   );
 };

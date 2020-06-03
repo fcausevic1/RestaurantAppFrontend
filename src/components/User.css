@@ -1,6 +1,16 @@
-.border {
-  width: 6.8em;
+.border,
+.numberBorder,
+.emailBorder {
+  width: 6em;
   text-align: center;
   border: 1px solid black;
   padding: 5px;
+}
+
+.numberBorder {
+  width: 2em !important;
+}
+
+.emailBorder {
+  width: 10em !important;
 }

@@ -8,8 +8,6 @@ const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState("");
 
-
-
   const getProducts = () => {
     const fetchData = async () => {
       const data = await ProductsService.getProducts();
@@ -26,16 +24,18 @@ const AdminProductsPage = (props) => {
   const removeItemFromList = (product) => {
     ProductsService.removeProduct(product);
     getProducts();
-    //   console.log("DD", products);
   };
 
   const addProduct = (name, price) => {
-    var product = { name, price: parseInt(price), categoryId: 1, description: "desc" };
+    var product = {
+      name,
+      price: parseInt(price),
+      categoryId: 1,
+      description: "desc",
+    };
     ProductsService.addProduct(product);
     //setProducts(products.concat(product));
     getProducts();
-
-
   };
 
   const editProduct = (product, editedName, editedPrice) => {
