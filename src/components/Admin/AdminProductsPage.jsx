@@ -3,6 +3,7 @@ import AdminProductList from "../AdminProductList.jsx";
 import NavBar from "../NavBar.jsx";
 import AdminSideBar from "../AdminSideBar.jsx";
 import ProductsService from "../ProductsService.js";
+import { async } from "rxjs/internal/scheduler/async";
 
 const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);
@@ -21,19 +22,19 @@ const AdminProductsPage = (props) => {
     getProducts();
   }, []);
 
-  const removeItemFromList = (product) => {
-    ProductsService.removeProduct(product);
+  const removeItemFromList = async (product) => {
+    await ProductsService.removeProduct(product);
     getProducts();
   };
 
-  const addProduct = (name, price) => {
+  const addProduct = async (name, price) => {
     var product = {
       name,
       price: parseFloat(price),
       categoryId: 1,
       description: "desc",
     };
-    ProductsService.addProduct(product);
+    await ProductsService.addProduct(product);
     //setProducts(products.concat(product));
     getProducts();
   };

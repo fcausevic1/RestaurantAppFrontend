@@ -71,7 +71,7 @@ const SideBar = (props) => {
           Product name:{" "}
         </label>
         <input
-          onChange={(e) => setProductName(e.target.value)}
+          // onChange={(e) => setProductName(e.target.value)}
           type="text"
           name="peditname"
           id="peditname"
@@ -79,6 +79,7 @@ const SideBar = (props) => {
           defaultValue={props.selectedProduct.name}
           onChange={(event) => {
             editedName = event.target.value;
+            setProductName(event.target.value);
           }}
         />
         <label htmlFor="peditprice" className="margin">
