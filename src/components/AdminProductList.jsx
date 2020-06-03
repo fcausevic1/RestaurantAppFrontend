@@ -20,7 +20,8 @@ const ProductList = (props) => {
             <button
               className="delBtn"
               type="button"
-              onClick={() => {
+              onClick={(event) => {
+                event.preventDefault();
                 props.removeItemFromList(product);
               }}
             >

@@ -3,6 +3,8 @@ const ProductsService = (() => {
     const products = await fetch("/api/products").then((response) => {
       return response.json();
     });
+    console.log("ok");
+
     return products;
   };
 
