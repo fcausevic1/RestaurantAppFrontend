@@ -2,12 +2,7 @@ import React from "react";
 import "./SideBar.css";
 
 const SideBar = (props) => {
-  return (
-    <div className="sideBar">
-      <h1>Order list</h1>
-      <ul className="OrderList"></ul>
-    </div>
-  );
+  return <div className="sideBar"></div>;
 };
 
 export default SideBar;

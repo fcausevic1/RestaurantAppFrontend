@@ -1,6 +1,6 @@
 import React from "react";
 import User from "./User.jsx";
-import "./UserList.css";
+import "./UsersList.css";
 
 const UserList = (props) => {
   const { users } = props;
