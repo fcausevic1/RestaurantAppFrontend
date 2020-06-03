@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AdminSideBar.css";
 
 const SideBar = (props) => {
@@ -8,6 +8,13 @@ const SideBar = (props) => {
   var editedName = "";
   var editedPrice = "";
 
+  const [ProductName, setProductName] = useState("");
+  const [ProductPrice, setProductPrice] = useState("");
+
+  function validateProduct() {
+    return ProductName.length > 0 && ProductPrice.length > 0;
+  }
+
   return (
     <div className="sideBar">
       <h1 className="addLabel">Add product</h1>
@@ -15,14 +22,26 @@ const SideBar = (props) => {
         <label htmlFor="pname" className="margin">
           Product name:{" "}
         </label>
-        <input type="text" name="pname" id="pname" className="margin" />
+        <input
+          type="text"
+          name="pname"
+          id="pname"
+          className="margin"
+          onChange={(e) => setProductName(e.target.value)}
+        />
         <br></br>
         <label htmlFor="pprice" className="margin">
           {" "}
           Product price:{" "}
         </label>
         <br></br>
-        <input type="text" name="pprice" id="pprice" className="margin" />
+        <input
+          type="text"
+          name="pprice"
+          id="pprice"
+          className="margin"
+          onChange={(e) => setProductPrice(e.target.value)}
+        />
         <br></br>
         <div className="margin">
           <button
@@ -32,6 +51,7 @@ const SideBar = (props) => {
             Cancel
           </button>
           <button
+            disabled={!validateProduct()}
             className="confirmBtn margin"
             onClick={(event) => {
               event.preventDefault();
@@ -51,6 +71,7 @@ const SideBar = (props) => {
           Product name:{" "}
         </label>
         <input
+          onChange={(e) => setProductName(e.target.value)}
           type="text"
           name="peditname"
           id="peditname"
@@ -73,6 +94,7 @@ const SideBar = (props) => {
           defaultValue={props.selectedProduct.price}
           onChange={(event) => {
             editedPrice = event.target.value;
+            setProductPrice(event.target.value);
           }}
         />
         <br></br>
@@ -84,6 +106,7 @@ const SideBar = (props) => {
             Cancel
           </button>
           <button
+            //  disabled={!validateProduct()}
             className="confirmBtn margin"
             onClick={(event) => {
               event.preventDefault();
