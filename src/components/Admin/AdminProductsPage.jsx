@@ -29,7 +29,7 @@ const AdminProductsPage = (props) => {
   const addProduct = (name, price) => {
     var product = {
       name,
-      price: parseInt(price),
+      price: parseFloat(price),
       categoryId: 1,
       description: "desc",
     };

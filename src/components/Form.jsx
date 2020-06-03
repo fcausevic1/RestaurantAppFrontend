@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Form.css";
+import { AuthenticationService } from "./AuthenticationService.js";
 
 const Form = (props) => {
   const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ const Form = (props) => {
       <div className="Login">
         <h1>Login</h1>
         <form onSubmit={handleSubmit}>
-          <FormGroup bsSize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Email</FormLabel>
             <FormControl
               className="field"
@@ -29,7 +30,7 @@ const Form = (props) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </FormGroup>
-          <FormGroup bsSize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Password</FormLabel>
             <FormControl
               value={password}
@@ -38,7 +39,15 @@ const Form = (props) => {
             />
           </FormGroup>
 
-          <Button block bsSize="large" disabled={!validateForm()} type="submit">
+          <Button
+            block
+            bssize="large"
+            disabled={!validateForm()}
+            type="submit"
+            onClick={(event) => {
+              AuthenticationService.login(email, password);
+            }}
+          >
             Login
           </Button>
         </form>
@@ -46,7 +55,7 @@ const Form = (props) => {
       <div className="Login">
         <h1>Register</h1>
         <form onSubmit={handleSubmit}>
-          <FormGroup controlId="name" bsSize="large">
+          <FormGroup controlId="name" bssize="large">
             <FormLabel className="loginLabel">Name</FormLabel>
             <FormControl
               className="field"
@@ -57,14 +66,14 @@ const Form = (props) => {
             />
           </FormGroup>
 
-          <FormGroup controlId="name" bsSize="large">
+          <FormGroup controlId="name" bssize="large">
             <FormLabel className="loginLabel">Last name</FormLabel>
             <FormControl
               //  onChange={(e) => setPassword(e.target.value)}
               type="name"
             />
           </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
+          <FormGroup controlId="password" bssize="large">
             <FormLabel className="loginLabel">Email</FormLabel>
             <FormControl
 
@@ -73,7 +82,7 @@ const Form = (props) => {
             />
           </FormGroup>
 
-          <FormGroup bsSize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Address</FormLabel>
             <FormControl
 
@@ -81,11 +90,11 @@ const Form = (props) => {
             //type="password"
             />
           </FormGroup>
-          <FormGroup bsSize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Username</FormLabel>
             <FormControl onChange={(e) => setPassword(e.target.value)} />
           </FormGroup>
-          <FormGroup bsSize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Password</FormLabel>
             <FormControl
               //  onChange={(e) => setPassword(e.target.value)}
@@ -93,7 +102,7 @@ const Form = (props) => {
             />
           </FormGroup>
 
-          <Button block bsSize="large" disabled={!validateForm()} type="submit">
+          <Button block bssize="large" disabled={!validateForm()} type="submit">
             Register
           </Button>
         </form>

@@ -7,7 +7,28 @@ import AdminOrderPage from "./components/Admin/AdminOrderPage.jsx";
 import AdminUserPage from "./components/Admin/AdminUserPage.jsx";
 import ProductsPage from "./components/User/ProductsPage.jsx";
 import Form from "./components/Form.jsx";
+import { AuthenticationService } from "./components/AuthenticationService.js";
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null,
+    };
+  }
+
+  componentDidMount() {
+    AuthenticationService.currentUser.subscribe((x) =>
+      this.setState({ currentUser: x })
+    );
+  }
+
+  logout() {
+    AuthenticationService.logout();
+    history.push("/form");
+  }
+
   render() {
     return (
       <Router>
