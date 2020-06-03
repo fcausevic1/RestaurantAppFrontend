@@ -1,0 +1,21 @@
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px;
+    background-color: #d4d4dc;
+    text-align: center;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    text-align: right;
+    max-width: 500px;
+  }
+
+  .registerBtn {
+    text-align: left;
+  }
+
+  .loginLabel {
+    padding: 2em;
+  }
+}
