@@ -1,6 +1,6 @@
 import React from "react";
 import User from "./User.jsx";
-import "./OrderList.css";
+import "./UserList.css";
 
 const UserList = (props) => {
   const { users } = props;
@@ -17,7 +17,7 @@ const UserList = (props) => {
               name={user.name}
               lastName={user.lastName}
               email={user.email}
-              adress={user.adress}
+              address={user.address}
               username={user.username}
               password={user.password}
               role={user.role}

@@ -2,12 +2,12 @@ import React from "react";
 import "./Order.css";
 const Order = (props) => {
   return (
-    <ul>
-      <li className="border">{props.id}</li>
-      <li className="border">{props.date}</li>
-      <li className="border">{props.completion}</li>
-      <li className="border">{props.user}</li>
+    <ul className="Order">
+      <li className="numberBorder">{props.id}</li>
+      <li className="border">{props.username}</li>
+      <li className="border dateBorder">{props.orderDate}</li>
       <li className="border">{props.coupon}</li>
+      <li className="border">{props.completed + ""}</li>
     </ul>
   );
 };

@@ -1,6 +1,10 @@
-.border {
-  width: 10em;
+.Order .border {
+  width: 7em;
   text-align: center;
   border: 1px solid black;
   padding: 5px;
+}
+
+.Order .dateBorder {
+  width: 15em !important;
 }

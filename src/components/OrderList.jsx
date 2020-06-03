@@ -18,11 +18,11 @@ const OrderList = (props) => {
             <Order
               setSelectedOrder
               id={order.id}
-              date={order.date}
-              completion={order.completion}
-              user={order.user}
-              coupon={order.coupon}
-              items={order.items}
+              username={order.user.username}
+              orderDate={order.orderDate}
+              coupon={order.coupon.code}
+              completed={order.completed}
+              orderItems={order.orderItems}
             ></Order>
           </li>
         ))}

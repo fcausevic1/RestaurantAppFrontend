@@ -1,0 +1,15 @@
+.tableContainer {
+  width: 83%;
+  float: left;
+}
+
+.table {
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+}
+
+.table li {
+  list-style: none;
+  display: inline-block;
+}
