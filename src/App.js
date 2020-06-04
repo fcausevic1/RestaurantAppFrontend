@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import logo from './logo.svg';
 import "./App.css";
@@ -25,9 +25,9 @@ const App = () => {
     }
   }, []);
 
-  const logout = () => {
-    AuthService.logout();
-  };
+  // const logout = () => {
+  //   AuthService.logout();
+  // };
 
   return (
     <Router>

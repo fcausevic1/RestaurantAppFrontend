@@ -18,6 +18,15 @@ const NavBar = (props) => {
         <li>
           <Link to="/admin/orders">Orders</Link>
         </li>
+
+        <span
+          className="logOut"
+          onClick={() => {
+            props.logout();
+          }}
+        >
+          Log out
+        </span>
       </ul>
     </div>
   );

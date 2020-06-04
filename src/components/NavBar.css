@@ -12,6 +12,22 @@
   font-weight: bold;
 }
 
+.logOut {
+  cursor: pointer;
+  color: #feda6a;
+  background-color: #1d1e22;
+  font-weight: bold;
+  float: right;
+  margin-right: 1em;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.logOut:hover {
+  background-color: #feda6a;
+  color: #1d1e22;
+}
+
 a:link {
   color: #feda6a;
 }

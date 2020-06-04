@@ -3,6 +3,7 @@ import UsersList from "../UsersList.jsx";
 import NavBar from "../NavBar.jsx";
 import UserSideBar from "../UserSideBar.jsx";
 import ProductsService from "../ProductsService.js";
+import AuthService from "../auth.service";
 
 const AdminUserPage = (props) => {
   var [users, setUsers] = useState([]);
@@ -31,9 +32,15 @@ const AdminUserPage = (props) => {
     getUsers();
   };
 
+  const logout = () => {
+    AuthService.logout();
+    props.history.push("/");
+    window.location.reload();
+  };
+
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar logout={logout}></NavBar>
       <div className="lista">
         <UsersList
           users={users}
