@@ -1,3 +1,14 @@
+.Btn {
+  font-weight: bold;
+  color: #393f4d;
+  background-color: #feda6a;
+  border-radius: 9px;
+  text-align: center;
+  font-size: large;
+  width: fit-content;
+  margin-top: 4px;
+}
+
 @media all and (min-width: 480px) {
   .Login {
     padding: 60px;
