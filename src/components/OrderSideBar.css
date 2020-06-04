@@ -57,7 +57,7 @@
   border-radius: 9px;
   font-size: large;
   text-align: center;
-  width: 5.1em;
+  width: fit-content;
 }
 
 .completeBtn {
@@ -67,5 +67,5 @@
   border-radius: 9px;
   text-align: center;
   font-size: large;
-  width: 5.1em;
+  width: fit-content;
 }

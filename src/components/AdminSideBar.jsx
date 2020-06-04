@@ -82,6 +82,7 @@ const SideBar = (props) => {
             setProductName(event.target.value);
           }}
         />
+        <br></br>
         <label htmlFor="peditprice" className="margin">
           {" "}
           Product price:{" "}

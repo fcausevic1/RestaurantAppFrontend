@@ -3,7 +3,6 @@ import AdminProductList from "../AdminProductList.jsx";
 import NavBar from "../NavBar.jsx";
 import AdminSideBar from "../AdminSideBar.jsx";
 import ProductsService from "../ProductsService.js";
-import { async } from "rxjs/internal/scheduler/async";
 
 const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);

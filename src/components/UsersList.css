@@ -6,10 +6,6 @@
 .table {
   text-align: center;
   list-style: none;
-  display: inline-block;
-}
-
-.table li {
-  list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }

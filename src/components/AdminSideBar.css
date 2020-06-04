@@ -43,7 +43,7 @@
   border-radius: 9px;
   font-size: large;
   text-align: center;
-  width: 4em;
+  width: fit-content;
 }
 
 .confirmBtn {
@@ -53,5 +53,5 @@
   border-radius: 9px;
   text-align: center;
   font-size: large;
-  width: 4em;
+  width: fit-content;
 }
