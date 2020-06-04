@@ -13,3 +13,7 @@
   list-style: none;
   display: inline-block;
 }
+
+.onSelect li:active {
+  color: #feda6a;
+}

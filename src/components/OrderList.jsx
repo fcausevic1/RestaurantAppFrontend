@@ -7,7 +7,7 @@ const OrderList = (props) => {
 
   return (
     <div className="tableContainer">
-      <ul className="table">
+      <ul className="table onSelect">
         {orders.map((order) => (
           <li
             key={order.id}

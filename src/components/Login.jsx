@@ -1,25 +1,47 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-import "./Form.css";
-import { AuthenticationService } from "./AuthenticationService.js";
+import "./Login.css";
+import AuthService from "./auth.service";
 
-const Form = (props) => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  //const [loading, setLoading] = useState(false);
+  //const [message, setMessage] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  const handleLogin = (event) => {
     event.preventDefault();
-  }
+
+    //setMessage("");
+    //setLoading(true);
+
+    AuthService.login(email, password).then(
+      () => {
+        props.history.push("/products");
+        window.location.reload();
+      } //,
+      // (error) => {
+      //   // const resMessage =
+      //   //   (error.response &&
+      //   //     error.response.data &&
+      //   //     error.response.data.message) ||
+      //   //   error.message ||
+      //   //   error.toString();
+      //   //setLoading(false);
+      //   //setMessage(resMessage);
+      // }
+    );
+  };
 
   return (
     <div className="wrapper">
       <div className="Login">
         <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <FormGroup bssize="large">
             <FormLabel className="loginLabel">Email</FormLabel>
             <FormControl
@@ -44,15 +66,13 @@ const Form = (props) => {
             bssize="large"
             disabled={!validateForm()}
             type="submit"
-            onClick={(event) => {
-              AuthenticationService.login(email, password);
-            }}
+            className="Btn"
           >
             Login
           </Button>
         </form>
       </div>
-      <div className="Login">
+      {/* <div className="Login">
         <h1>Register</h1>
         <form onSubmit={handleSubmit}>
           <FormGroup controlId="name" bssize="large">
@@ -102,12 +122,18 @@ const Form = (props) => {
             />
           </FormGroup>
 
-          <Button block bssize="large" disabled={!validateForm()} type="submit">
+          <Button
+            block
+            bssize="large"
+            disabled={!validateForm()}
+            type="submit"
+            className="Btn"
+          >
             Register
           </Button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
-export default Form;
+export default Login;
