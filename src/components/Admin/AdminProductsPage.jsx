@@ -3,6 +3,7 @@ import AdminProductList from "../AdminProductList.jsx";
 import NavBar from "../NavBar.jsx";
 import AdminSideBar from "../AdminSideBar.jsx";
 import ProductsService from "../ProductsService.js";
+import AuthService from "../auth.service";
 
 const AdminProductsPage = (props) => {
   const [products, setProducts] = useState([]);
@@ -44,9 +45,15 @@ const AdminProductsPage = (props) => {
     setProducts(products.concat());
   };
 
+  const logout = () => {
+    AuthService.logout();
+    props.history.push("/");
+    window.location.reload();
+  };
+
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar logout={logout}></NavBar>
       <div>
         <AdminProductList
           products={products}

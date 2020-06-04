@@ -18,7 +18,6 @@ const login = (email, password) => {
       password,
     })
     .then((response) => {
-      //moguc problem, provjeriti da li ide accessToken ili samo token ili nesto trece
       if (response.data.accessToken) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }

@@ -3,6 +3,7 @@ import ProductList from "../ProductList.jsx";
 import SideBar from "../SideBar.jsx";
 import ProductsService from "../ProductsService.js";
 import NavBar from "../NavBar.jsx";
+import AuthService from "../auth.service";
 
 const ProductsPage = (props) => {
   const [products, setProducts] = useState([]);
@@ -56,9 +57,15 @@ const ProductsPage = (props) => {
     }
   };
 
+  const logout = () => {
+    AuthService.logout();
+    props.history.push("/");
+    window.location.reload();
+  };
+
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar logout={logout}></NavBar>
       <div>
         <ProductList
           onAddProduct={onAddProduct}

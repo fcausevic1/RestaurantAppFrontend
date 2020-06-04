@@ -9,24 +9,22 @@
   margin-top: 4px;
 }
 
-@media all and (min-width: 480px) {
-  .Login {
-    padding: 60px;
-    background-color: #d4d4dc;
-    text-align: center;
-  }
+.Btn:hover {
+  transform: scale(1.1);
+}
 
-  .Login form {
-    margin: 0 auto;
-    text-align: right;
-    max-width: 500px;
-  }
+.Login {
+  background-color: #d4d4dc;
+  text-align: center;
+  margin-top: 6em;
+}
 
-  .registerBtn {
-    text-align: left;
-  }
+.Login form {
+  margin: 0 auto;
+  text-align: right;
+  max-width: 500px;
+}
 
-  .loginLabel {
-    padding: 2em;
-  }
+.loginLabel {
+  padding: 2em;
 }

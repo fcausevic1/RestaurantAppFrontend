@@ -3,6 +3,7 @@ import NavBar from "../NavBar.jsx";
 import OrderSideBar from "../OrderSideBar.jsx";
 import OrderList from "../OrderList.jsx";
 import OrderService from "../OrderService.js";
+import AuthService from "../auth.service";
 
 const AdminOrderPage = (props) => {
   const [orders, setOrders] = useState([]);
@@ -31,9 +32,15 @@ const AdminOrderPage = (props) => {
     setSelectedOrder(order);
   };
 
+  const logout = () => {
+    AuthService.logout();
+    props.history.push("/");
+    window.location.reload();
+  };
+
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar logout={logout}></NavBar>
       <div>
         <OrderList
           orders={orders}

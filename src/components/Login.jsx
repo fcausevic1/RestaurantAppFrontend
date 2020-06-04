@@ -9,8 +9,21 @@ const Login = (props) => {
   //const [loading, setLoading] = useState(false);
   //const [message, setMessage] = useState("");
 
-  function validateForm() {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [emailReg, setEmailReg] = useState("");
+  const [address, setAddress] = useState("");
+  const [username, setUsername] = useState("");
+  const [passwordReg, setPasswordReg] = useState("");
+
+  function validateLoginForm() {
     return email.length > 0 && password.length > 0;
+  }
+
+  function validateRegisterForm() {
+    return emailReg.length > 0 && passwordReg.length > 0;
+    name.length > 0 && lastName.length > 0;
+    address.length > 0 && username.length > 0;
   }
 
   const handleLogin = (event) => {
@@ -34,6 +47,26 @@ const Login = (props) => {
       //   //setLoading(false);
       //   //setMessage(resMessage);
       // }
+    );
+  };
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    AuthService.register(
+      name,
+      lastName,
+      emailReg,
+      address,
+      username,
+      passwordReg
+    ).then(
+      (response) => {
+        //ovdje dodati popup ili tako nesto da obavjestimo o uspjesnoj registraciji
+        //najpametnije mozda koristiti setMessage koji je u loginu zakomentarisan
+        //i onda prikazivati taj message ispod
+      } //,
+      // (error) => { }
     );
   };
 
@@ -64,7 +97,7 @@ const Login = (props) => {
           <Button
             block
             bssize="large"
-            disabled={!validateForm()}
+            disabled={!validateLoginForm()}
             type="submit"
             className="Btn"
           >
@@ -72,52 +105,49 @@ const Login = (props) => {
           </Button>
         </form>
       </div>
-      {/* <div className="Login">
+      <div className="Login">
         <h1>Register</h1>
-        <form onSubmit={handleSubmit}>
-          <FormGroup controlId="name" bssize="large">
+        <form onSubmit={handleRegister}>
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Name</FormLabel>
             <FormControl
               className="field"
               autoFocus
-              type="mame"
-
-              // onChange={(e) => setEmail(e.target.value)}
+              type="name"
+              onChange={(e) => setName(e.target.value)}
             />
           </FormGroup>
 
-          <FormGroup controlId="name" bssize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Last name</FormLabel>
             <FormControl
-              //  onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
               type="name"
             />
           </FormGroup>
-          <FormGroup controlId="password" bssize="large">
+          <FormGroup bssize="large">
             <FormLabel className="loginLabel">Email</FormLabel>
             <FormControl
-
-            //7onChange={(e) => setEmail(e.target.value)I
-            //type="email"
+              onChange={(e) => setEmailReg(e.target.value)}
+              type="email"
             />
           </FormGroup>
 
           <FormGroup bssize="large">
             <FormLabel className="loginLabel">Address</FormLabel>
             <FormControl
-
-            //onChange={(e) => setPassword(e.target.value)}
-            //type="password"
+              onChange={(e) => setAddress(e.target.value)}
+              type="name"
             />
           </FormGroup>
           <FormGroup bssize="large">
             <FormLabel className="loginLabel">Username</FormLabel>
-            <FormControl onChange={(e) => setPassword(e.target.value)} />
+            <FormControl onChange={(e) => setUsername(e.target.value)} />
           </FormGroup>
           <FormGroup bssize="large">
             <FormLabel className="loginLabel">Password</FormLabel>
             <FormControl
-              //  onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPasswordReg(e.target.value)}
               type="password"
             />
           </FormGroup>
@@ -125,14 +155,14 @@ const Login = (props) => {
           <Button
             block
             bssize="large"
-            disabled={!validateForm()}
+            disabled={!validateRegisterForm()}
             type="submit"
             className="Btn"
           >
             Register
           </Button>
         </form>
-      </div> */}
+      </div>
     </div>
   );
 };
